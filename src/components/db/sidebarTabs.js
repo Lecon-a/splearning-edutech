@@ -1,31 +1,22 @@
 import { FaTicketAlt, FaLightbulb, FaChartPie } from "react-icons/fa";
-import { IoIosPeople } from 'react-icons/io';
-import { SiBookstack } from "react-icons/si";
+import { IoIosPeople } from "react-icons/io";
 
 const tabs = [
   {
-    title: "overview",
+    title: "home",
     image: <FaChartPie className="fs-3" />,
   },
   {
-    title: "tickets",
+    title: "services",
     image: <FaTicketAlt className="fs-3" />,
   },
   {
-    title: "ideas",
+    title: "about Us",
     image: <FaLightbulb className="fs-3" />,
   },
   {
-    title: "contacts",
+    title: "contact Us",
     image: <IoIosPeople className="fs-3" />,
-  },
-  {
-    title: "agents",
-    image: <FaTicketAlt className="fs-3" />,
-  },
-  {
-    title: "articles",
-    image: <SiBookstack className="fs-3" />,
   },
 ];
 export default tabs;

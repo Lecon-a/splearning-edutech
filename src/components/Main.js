@@ -1,14 +1,14 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
+import Footer from "./Footer";
 
-const Main = () => {
+const Main = (props) => {
   return (
     <>
-      <div>
-        <Header />
-        <Outlet />
-      </div>
+      <Header activeTab={props.activeTab} />
+      <Outlet />
+      <Footer />
     </>
   );
 };

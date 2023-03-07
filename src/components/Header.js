@@ -1,23 +1,15 @@
 import React from "react";
-import CurrentTab from "./CurrentTab";
-import Menu from "./Menu";
 
 const Header = (props) => {
-  
   return (
     <>
-      {props.activeTab &&
-        <div className="header-wrapper">
-          <div className="row">
-            <div className="col-12 d-flex justify-content-between">
-              <div>
-                <CurrentTab title={props.activeTab} />
-              </div>
-              <div><Menu /></div>
-            </div>
+      <div className="header-wrapper">
+        <div className="row d-flex flex-column">
+                  <div className="col-12">
+                      <h1 className="text-center">{ props.activeTab }</h1>
           </div>
         </div>
-      }
+      </div>
     </>
   );
 };

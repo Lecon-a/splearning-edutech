@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -7,7 +8,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+:root {
+  --color-eeeeee: #eeeeee;
+  --color-9999ff: #7777ff1a;
+  --color-0f0938: #0f0938;
+}
+
 ul {
+  margin: 0;
   padding: 0;
 }
 
@@ -17,287 +25,129 @@ ul, li {
 
 a {
   text-decoration: none;
+  color: var(--color-eeeeee);
 }
 
-.links, .links:hover {
-  color: var(--color-A4A6B3);
-}
-
-h1, h2, h3, h4, h5, h6, p {
-  padding: 0;
+h1, h2, h3, 
+h4, h5, h6, 
+p {
   margin: 0;
-}
-
-:root {
-  --color-363740: #363740;
-  --color-3751FF: #3751FF;
-  --color-A4A6B3: #A4A6B3;
-  --color-A4A6B3a1: rgba(128, 128, 128, 0.25);
-  --color-DFE0EB: #DFE0EB;
-  --color-F7F8FC: #F7F8FC;
-}
-
-.row > * {
   padding: 0;
-}
-
-.gap-12 {
-  gap: 12px;
 }
 
 .gap-20 {
   gap: 20px;
 }
 
-.active {
-  border-left: 17px solid #DFE0EB;
-  background-color: #DFE0EB12;
-}
-
-.gap-30 {
-  gap: 30px;
-}
-
-.gap-40 {
-  gap: 40px;
-}
-
-.gap-60 {
-  gap: 60px;
-}
-
 .layout-wrapper {
-  background-color: var(--color-F7F8FC);
-;
-}
-
-.layout-inner-wrapper {
-  display: flex;
-  flex-direction: row;
-}
-
-/* Header component */
-.header-wrapper, 
-.overview-wrapper,
-.sheet-wrapper,
-.ticket-wrapper {
-  margin: 0;
-  padding-bottom: 40px;
-}
-
-.header-menu-left {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.active-user-info {
-  display: flex;
-  align-items: center;
-}
-
-.active-user-info .user-image {
-  width: 90px;
-  height: 55px;
-  margin: 0;
-  padding: 0 17.5px;
+  overflow-x: hidden;
   box-sizing: border-box;
 }
 
-.user-image img {
-  border-radius: 50%;
-  width: 55px;
-  height: 55px;
-  padding: 3px;
-  border: 3px solid var(--color-A4A6B3);
-  box-sizing: border-box;
-}
+/* wrapper */
 
-.user-image img:hover { 
-  border-color: var(--color-3751FF);
- }
-
-/* Header component ends here */
-
-/* Sidebar page */
 .sidebar-wrapper {
-  width: 350px;
-  background-color: var(--color-363740);
-  box-sizing: border-box;
   position: relative;
-}
-
-.sidebar-text-logo {
-  color: var(--color-A4A6B3);
-  font-weight: 700;
-  line-height: 24px;
-  letter-spacing: 0.4000000059604645px;
-  font-size: 27.5px;
-  text-align: left;
-}
-
-.logo-block {
-  padding: 43px 54px;
-}
-
-.logo {
-  padding: 11px 12px;
-  border-radius: 50%;
-  background-color: var(--color-3751FF);
-}
-
-.logo-D {
-  width: 16px;
-  height: 18px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  background-color: white;
-}
-
-.sidebar-upper-list a{
-  padding: 24px 64px;
-}
-
-.divider, .vertical-divider {
-  height: 1px;
-  background-color: var(--color-A4A6B3a1);
-}
-
-.vertical-divider {
-  width: 1.5px;
-  height: 42px;
-  margin: 0 32px;
-}
-
-.present-trend .divider {
-  background-color: #3751FF;
-
-}
-
-.past-trend .divider {
-  background-color: #9FA2B4;
-}
-
-.chart .vertical-divider {
-  width: 1px;
-  margin: 0;
-}
-/* Sidebar page ends here */
-
-/* Main page */
-.main-wrapper {
-  flex: 1;
-  padding: 50px;
-  position: relative;
-  background-color: var(--color-F7F8FC);
-}
-/* Main page ends here */
-
-/* Card component */
-.card {
-  border: 1px solid ;
-  flex: 1;
-  padding: 24px 32px;
-  justify-content: center;
-  text-align: center;
-  border-radius: 8px;
-  box-sizing: border-box;
-}
-
-.card h6 {
-  color: #9FA2B4;
-}
-
-.card h3 {
-  padding: 4px;
-  margin-top: 4px;
-}
-/* Card component ends here */
-
-/* Chart or Sheet section */
-
-/* trend chart */
-.trend-chart {
-  flex: 1;
-  height: fix-content;
-  padding: 0 20px 20px;
-}
-/* trend chart ends here */
-
-.chart {
-  border-radius: 8px;
   contain: content;
-  background-color: white;
+  height: 100vh;
+  margin-right: 0;
+}
+
+.sidebar {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-9999ff);
   box-sizing: border-box;
 }
 
-.chart .chart-card {
-  flex: 3;
-  display: flex;
-  flex-direction: column;
+.main {
+  margin-left: 0;
+  position: relative;
+}
+/* wrapper ends here */
+
+/* sidebar part */
+
+.logo-wrapper {
+  padding: 60px 15%;
+  margin-bottom: 32px;
+  border-bottom: 4px solid rgb(189, 189, 88);
+  background-color: var(--color-0f0938);
+  box-sizing: border-box;
 }
 
-.chart {
-  padding-right: 0;
+.sidebar-text-logo-1 {
+  width: fit-content;
+  color: white;
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  padding: 8px 0 16px;
 }
 
-.chart-data .card {
-  height: 25%;
-  width: 420px;
-  border-radius: 0;
-  border: 1px solid transparent;
+.sidebar-text-logo-2 {
+  width: fit-content;
+  color: yellow;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 22px;
+  padding: 0;
 }
 
-.present-trend, .past-trend {
-  color: #9FA2B4;
+.tabs .links {
+  padding: 5% 15%;
+  color: var(--color-0f0938);
 }
 
-/* summary wrapper */
-.summary-wrapper .row {
-  display: flex;
-  flex-direction: row;
+/* sidebar ends here */
+
+/* main */
+/* header */
+.header-wrapper, .footer-wrapper {
+  padding: 30px;
+  background-color: var(--color-0f0938);
+  color: var(--color-eeeeee);
+  border-bottom: 4px solid rgb(189, 189, 88);
 }
 
-.summary-wrapper .task-card {
-  flex: 1;
-  background-color: white;
-  border-radius: 8px;
-}
-
-.task-divider {
-  border-bottom: 1px solid var(--color-A4A6B3a1);
-}
-
-.task-divider:last-child {
+.footer-wrapper {
+  border-top: 4px solid rgb(189, 189, 88);
   border-bottom: none;
+  text-align: center;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
 }
-/* summary wrapper ends here */
-/* Chart or Sheet section ends */
+/* header ends here */
 
-/* Ticket page */
+/* home page */
+.home-wrapper {
+  padding: 30px;
+  overflow-y: hidden;
+  height: 86.2vh;
+}
+/* home ends here */
+/* main ends here */
 
-.all-tickets-border {
-  border: 1px solid var(--color-DFE0EB);
-  border-radius: 10px;
-  background-color: white;
+
+/* @media query */
+@media screen and (max-width: 612px) {
+  .sidebar-wrapper {
+    display: none;
+  }
+
+  .main {
+    width: 100%!important;
+    height: 100vh;
+    font-size: medium;
+    border: 1px solid red;
+  }
 }
 
-.ordered-ticket {
-  padding: 15px 20px;
-  border-bottom: 2px solid var(--color-DFE0EB);
-}
-
-.ordered-ticket > div:not(.ticket-three-dots) {
-  flex: 2;
-}
-
-.ordered-ticket .ticket-details {
-  flex: 4!important;
-}
-
-.hide {
-  visibility: hidden;
-}
-/* Ticket page ends here */
-
-
+/* @media query ends here */
