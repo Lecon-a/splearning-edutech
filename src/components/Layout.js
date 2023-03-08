@@ -14,7 +14,7 @@ const Layout = () => {
           </div>
           <div className="col-9 px-0 main">
             <div className="main-wrapper">
-              <Main activeTab="Home" />
+              <Main />
             </div>
           </div>
         </div>

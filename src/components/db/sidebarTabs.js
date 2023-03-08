@@ -1,10 +1,11 @@
-import { FaTicketAlt, FaLightbulb, FaChartPie } from "react-icons/fa";
+import { FaTicketAlt, FaLightbulb  } from "react-icons/fa";
 import { IoIosPeople } from "react-icons/io";
+import { AiOutlineHome } from "react-icons/ai";
 
 const tabs = [
   {
     title: "home",
-    image: <FaChartPie className="fs-3" />,
+    image: <AiOutlineHome className="fs-3" />,
   },
   {
     title: "services",

@@ -1,24 +1,24 @@
 import React, { useState } from "react";
 import menus from "./db/sidebarTabs";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
+
 
 const SideBar = () => {
   const [tabs] = useState(menus);
-
-  const handleClick = (e) => {
-    document.querySelectorAll(".links").forEach((link) => {
-      link.classList.remove("active");
-    });
-    e.target.parentElement.classList.add("active");
-  };
 
   const tabElements = tabs.map((tab, index) => {
     return (
       <li key={index} id={tab}>
         <Link
           className="links d-flex gap-20 align-items-center justify-content-start"
-          to={tab.title}
-          onClick={handleClick}
+          to={
+            tab.title === "home"
+              ? "/"
+              : tab.title === "services"
+              ? "/services"
+              : "/" + tab.title.split(" ")[0]
+          }
         >
           {tab.image}
           <h4>
@@ -42,6 +42,7 @@ const SideBar = () => {
             <ul className="tabs">{tabElements}</ul>
           </div>
         </div>
+        <Footer />;
       </div>
     </>
   );
