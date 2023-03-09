@@ -8,6 +8,10 @@ const tabs = [
     image: <AiOutlineHome className="fs-3" />,
   },
   {
+    title: "courses",
+    image: <FaTicketAlt className="fs-3" />,
+  },
+  {
     title: "services",
     image: <FaTicketAlt className="fs-3" />,
   },

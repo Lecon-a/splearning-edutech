@@ -2,6 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Layout from "./components/Layout";
+import Courses from "./pages/Courses";
 import Services from "./pages/Services";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -14,26 +15,11 @@ const App = () => {
     <>
       <Routes>
         <Route exact path="/" element={<Layout />}>
-          <Route
-            index
-            
-            element={<Home />}
-          />
-          <Route
-            path="services"
-            
-            element={<Services />}
-          />
-          <Route
-            path="about"
-            
-            element={<About />}
-          />
-          <Route
-            path="contact"
-            
-            element={<Contact />}
-          />
+          <Route index element={<Home />} />
+          <Route path="courses" element={<Courses />} />
+          <Route path="services" element={<Services />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>
     </>

@@ -9,7 +9,7 @@ const Contact = () => {
     <>
       <Meta title="Contact Us" />
       <Header activeTab="Contact Us" />
-      <div className="contact-wrapper py-5 home-wrapper-2">
+      <div className="contact-wrapper home-wrapper-2">
         <div className="container-xxl">
           <div className="row mt-5">
             <h5 className="section-heading">Contact Us</h5>

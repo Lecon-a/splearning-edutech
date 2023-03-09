@@ -12,10 +12,8 @@ const Layout = () => {
               <SideBar />
             </div>
           </div>
-          <div className="col-9 px-0 main">
-            <div className="main-wrapper">
-              <Main />
-            </div>
+          <div className="col-9 px-0 main-wrapper">
+            <Main />
           </div>
         </div>
       </div>

@@ -5,7 +5,7 @@ const Footer = () => {
         <div className="footer-wrapper">
             <div className="row">
                 <div className="col-12">
-                    Footer
+                    <h6><i>SPLearning Developers &copy; 2023</i></h6>
                 </div>
             </div>
         </div>

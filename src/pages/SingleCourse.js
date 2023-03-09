@@ -4,11 +4,11 @@ import Header from "../components/Header";
 import { Link } from "react-router-dom";
 import { HiOutlineArrowLeft } from "react-icons/hi";
 
-const SingleService = () => {
+const SingleCourse = () => {
   return (
     <>
-      <Meta title="Dynamic Service Name" />
-      <Header title="Dynamic Service Name" />
+      <Meta title="Dynamic course Name" />
+      <Header title="Dynamic course Name" />
       <div className="blog-wrapper home-wrapper-2 py-5">
         <div className="container-xxl">
           <div className="row">
@@ -38,4 +38,4 @@ const SingleService = () => {
   );
 };
 
-export default SingleService;
+export default SingleCourse;
